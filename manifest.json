@@ -1,0 +1,22 @@
+{
+  "name": "Mely Nails",
+  "short_name": "Mely",
+  "description": "Uñas y belleza - Tu espacio de cuidado personal",
+  "start_url": "/mely-nails/",
+  "scope": "/mely-nails/",
+  "display": "standalone",
+  "background_color": "#ec4899",
+  "theme_color": "#ec4899",
+  "icons": [
+    {
+      "src": "/mely-nails/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/mely-nails/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
