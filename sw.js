@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Mely Nails
+// sw.js - Service Worker para Yami Nails Beauty
 
-const CACHE_NAME = 'mely-nails-v1';
+const CACHE_NAME = 'yaminailsbeauty-v1';
 const urlsToCache = [
-  '/mely-nails/',
-  '/mely-nails/index.html',
-  '/mely-nails/admin.html',
-  '/mely-nails/admin-login.html',
-  '/mely-nails/setup-wizard.html',
-  '/mely-nails/editar-negocio.html',
-  '/mely-nails/manifest.json',
-  '/mely-nails/icons/icon-72x72.png',
-  '/mely-nails/icons/icon-96x96.png',
-  '/mely-nails/icons/icon-128x128.png',
-  '/mely-nails/icons/icon-144x144.png',
-  '/mely-nails/icons/icon-152x152.png',
-  '/mely-nails/icons/icon-192x192.png',
-  '/mely-nails/icons/icon-384x384.png',
-  '/mely-nails/icons/icon-512x512.png'
+  '/yaminailsbeauty/',
+  '/yaminailsbeauty/index.html',
+  '/yaminailsbeauty/admin.html',
+  '/yaminailsbeauty/admin-login.html',
+  '/yaminailsbeauty/setup-wizard.html',
+  '/yaminailsbeauty/editar-negocio.html',
+  '/yaminailsbeauty/manifest.json',
+  '/yaminailsbeauty/icons/icon-72x72.png',
+  '/yaminailsbeauty/icons/icon-96x96.png',
+  '/yaminailsbeauty/icons/icon-128x128.png',
+  '/yaminailsbeauty/icons/icon-144x144.png',
+  '/yaminailsbeauty/icons/icon-152x152.png',
+  '/yaminailsbeauty/icons/icon-192x192.png',
+  '/yaminailsbeauty/icons/icon-384x384.png',
+  '/yaminailsbeauty/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/mely-nails/icons/icon-192x192.png');
+            return caches.match('/yaminailsbeauty/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Mely Nails');
+console.log('✅ Service Worker configurado para Yami Nails Beauty');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
